@@ -12,8 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.SimpleThreadScope;
 
-@SpringBootApplication // (exclude= {HibernateJpaAutoConfiguration.class,
-						// JpaRepositoriesAutoConfiguration.class})
+@SpringBootApplication
 public class BeanApplication {
 
 	@Bean
