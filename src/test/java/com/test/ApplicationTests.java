@@ -21,7 +21,6 @@ import com.test.bean.BeanApplication;
 
 import org.junit.Test;
 
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
@@ -32,14 +31,12 @@ public class ApplicationTests {
 
 	@Test
 	public void bean() {
-		new SpringApplicationBuilder(BeanApplication.class).web(WebApplicationType.NONE)
-		.run().close();
+		new SpringApplicationBuilder(BeanApplication.class).web(false).run().close();
 	}
 
 	@Test
 	public void auto() {
-		new SpringApplicationBuilder(AutoApplication.class).web(WebApplicationType.NONE)
-		.run().close();
+		new SpringApplicationBuilder(AutoApplication.class).web(false).run().close();
 	}
 
 }
