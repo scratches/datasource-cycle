@@ -22,6 +22,7 @@ import com.test.bean.BeanApplication;
 import org.junit.Test;
 
 import org.springframework.boot.WebApplicationType;
+import org.springframework.boot.autoconfigure.jdbc.AnotherNotBrokenApplication;
 import org.springframework.boot.autoconfigure.jdbc.BrokenApplication;
 import org.springframework.boot.autoconfigure.jdbc.NotBrokenApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -53,6 +54,12 @@ public class ApplicationTests {
 	@Test
 	public void notbroken() {
 		new SpringApplicationBuilder(NotBrokenApplication.class).web(WebApplicationType.NONE)
+		.run().close();
+	}
+
+	@Test
+	public void another() {
+		new SpringApplicationBuilder(AnotherNotBrokenApplication.class).web(WebApplicationType.NONE)
 		.run().close();
 	}
 

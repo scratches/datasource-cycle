@@ -44,7 +44,7 @@ public class NotBrokenApplication {
 
 	@Bean
 	@Scope("foo")
-	@ConfigurationProperties(prefix = "spring.datasource.hikari")
+	@ConfigurationProperties(prefix = "spring.datasource.ok")
 	public HikariDataSource dataSource(DataSourceProperties properties) {
 		HikariDataSource dataSource = properties.initializeDataSourceBuilder()
 				.type(HikariDataSource.class).build();
